@@ -1,3 +1,9 @@
+document.getElementById('mulai').addEventListener('click', function() {
+    // Menambahkan class 'active' ke game-screen untuk memulai animasi
+    document.getElementById('gameIn').classList.add('active');
+});
+
+
 let words = [
 
     "tes"
