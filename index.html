@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <div class="game">
         <div class="title">
-            <h1>Gaming</h1>
+            <button id="mulai">Gaming</button>
         </div>
-        
+        <br>
         <div class="inp">
             <input id="inp">
             <button id="sub">Submit</button>
@@ -22,14 +23,47 @@
             <p id="myP"></p>
         </div>    
 
-        <div class="output">
-        <h1 id="myh1"></h1>
-        </div>    
+
 
         <div class="time">
             <h1>Waktu:</h1>
             <h1 id="myh2"></h1>
         </div>
+
+
+        <div class="output">
+            <h1 id="myh1"></h1>
+        </div>    
+
+        <div class="health">
+            <h3 id="nyawa">Nyawa:</h3>
+
+            <div class="modifyPlayer">
+                <h3>Pemain:</h3>
+                <h3 id="pemain"></h3>
+                <button id="kurangPemain">-1</button>
+                <button id="tambahPemain">+1</button>
+                <h1 id="turn">Giliran:</h1>                
+            </div>
+
+
+            <div>
+                <h1 id="menang">Menang:</h1>
+            </div>
+        </div>
+
+        <div class="duaPlayer">
+        </div>
+
+        <div class="tigaPlayer">
+        </div>
+
+        <div class="empatPlayer">
+        </div>
+
+
+        <button id="log">LOG</button>
+
     </div>
  
     <script src="index.js"></script>
