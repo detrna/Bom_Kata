@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <div class="game">
         <div class="title">
-            <h1>Gaming</h1>
+            <button id="mulai">Gaming</button>
         </div>
-        
+        <br>
         <div class="inp">
             <input id="inp">
             <button id="sub">Submit</button>
@@ -22,16 +23,103 @@
             <p id="myP"></p>
         </div>    
 
-        <div class="output">
-        <h1 id="myh1"></h1>
-        </div>    
-
         <div class="time">
             <h1>Waktu:</h1>
             <h1 id="myh2"></h1>
         </div>
+
+
+        <div class="output">
+            <h1 id="myh1"></h1>
+        </div>    
+
+        <div class="health">
+            
+
+            <div class="modifyPlayer">
+                <h3>Pemain:</h3>
+                <h3 id="pemain"></h3>
+                <input id="nama"> <br> <br>
+                <button id="kurangPemain">-</button>
+                <button id="tambahPemain">+</button>
+                <button id="logs">LOG</button>
+                <button id="logs2">LOG2</button>
+            </div>
+
+            <div class="player"></div>
+
+
+            <div class="giliran">
+                <h1 id="turn">Giliran:</h1>
+            </div>
+
+            <div>
+                <h1 id="menang">Menang:</h1>
+            </div>
+        </div>
+
+        <div class="duaPlayer"> 
+            2 Player <br>
+            <p1 id="2pemainSatu">Player1</p1> <br>
+            <p1 id="2nyawaP1">nyawa1</p1> <br> <br>
+        
+            <p2 id="2pemainDua">Player2</p2> <br>
+            <p2 id="2nyawaP2">nyawa2</p2> <br> <br>
+        </div>
+        
+        <div class="tigaPlayer"> 
+            3 Player <br>
+            <p1 id="3pemainSatu">Player1</p1> <br>
+            <p1 id="3nyawaP1">nyawa1</p1> <br> <br>
+        
+            <p2 id="3pemainDua">Player2</p2> <br>
+            <p2 id="3nyawaP2">nyawa2</p2> <br> <br>
+        
+            <p3 id="3pemainTiga">Player3</p3> <br>
+            <p3 id="3nyawaP3">nyawa3</p3> <br> <br>
+        </div>
+        
+        <div class="empatPlayer"> 
+            4 Player <br>
+            <p1 id="4pemainSatu">Player1</p1> <br>
+            <p1 id="4nyawaP1">nyawa1</p1> <br> <br>
+        
+            <p2 id="4pemainDua">Player2</p2> <br>
+            <p2 id="4nyawaP2">nyawa2</p2> <br> <br>
+        
+            <p3 id="4pemainTiga">Player3</p3> <br>
+            <p3 id="4nyawaP3">nyawa3</p3> <br> <br>
+        
+            <p4 id="4pemainEmpat">Player4</p4> <br>
+            <p4 id="4nyawaP4">nyawa4</p4> <br> <br>
+        </div>
+        
+        
+        
+        
+
+        <button id="log">LOG</button>
+
     </div>
- 
+
+<div class="setting">
+    <div id="health">
+        <h3 id="nyawa">Nyawa:</h3>
+        <button id="kurangNyawa">-</button>
+        <button id="tambahNyawa">+</button>
+        <button>LOG</button>
+    </div>
+
+    <div id="times">
+        <h3 id="countdown">Waktu:</h3>
+        <button id="kurangWaktu">-</button>
+        <button id="tambahWaktu">+</button>
+        <button>LOG</button>
+
+
+    </div>
+
+</div>
     <script src="index.js"></script>
 </body>
 </html>
