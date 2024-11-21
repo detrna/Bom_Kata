@@ -1,37 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bomb Party</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="game">
-        <div class="title">
-            <h1>Gaming</h1>
+      <div class="title" id="title">
+        <button id="mulai">MAIN!</button>
+        <div class="mode">
+          <div class="modeGameScore">
+            <div id="modeText">MODE:</div>
+            <div id="modeGame">SKOR</div>
+          </div>
+          <div class="modeGameCompletionist">
+            <div id="modeText">MODE:</div>
+            <div id="modeGame">Coming Soon !!!</div>
+          </div>
+          <div class="modeButton">
+            <button id="buttonRight"></button>
+            <button id="buttonLeft"></button> 
+          </div>
+        </div>         
+        <button id="settings">PENGATURAN</button>
+        <div class="modifyPlayer">
+          <h3 id="pemain">Pemain:</h3>
+          <input id="inpNama" placeholder=" Nama ...">  
+          <script>
+        document.addEventListener('keydown', (event) => {
+            // Memastikan tombol adalah huruf A-Z
+            if (event.key.length === 1 && /^[a-zA-Z]$/.test(event.key)) {
+              if(halamanUtama){
+                const input = document.getElementById('inpNama');
+                input.focus();
+              }
+            }
+        });
+        </script>
+          <div>
+            <button id="tambahPemain">+</button>
+            <button id="kurangPemain">-</button>
+          </div>
         </div>
-        
-        <div class="inp">
-            <input id="inp">
-            <button id="sub">Submit</button>
+      </div>
+      <div class="gameIn" id="gameIn">
+        <div class="score">
+          <div class="scoreP1">
+              <div id="scoreText1"></div>
+              <div id="scoreValue1"></div>
+          </div>
+          <div class="scoreP2">
+              <div id="scoreText2"></div>
+              <div id="scoreValue2"></div>
+          </div>
+          <div class="scoreP3">
+              <div id="scoreText3"></div>
+              <div id="scoreValue3"></div>
+          </div>
+          <div class="scoreP4">
+              <div id="scoreText4"></div>
+              <div id="scoreValue4"></div>
+          </div>
         </div>
-
         <div class="randomLetter">
-            <p>Huruf:</p>
-            <p id="myP"></p>
-        </div>    
-
-        <div class="output">
-        <h1 id="myh1"></h1>
-        </div>    
-
-        <div class="time">
-            <h1>Waktu:</h1>
-            <h1 id="myh2"></h1>
+          <p id="myP"></p>
         </div>
+        <div class="time">
+          <h1></h1>
+          <h1 id="myh2"></h1>
+        </div>
+        <div class="inp">
+          <input id="inp">
+          <script>
+        document.addEventListener('keydown', (event) => {
+            // Memastikan tombol adalah huruf A-Z
+            if (event.key.length === 1 && /^[a-zA-Z]$/.test(event.key)) {
+              if(!halamanUtama){
+                const input = document.getElementById('inp');
+                input.focus();
+              }
+            }
+        });
+        </script>
+        </div>
+        <div class="output">
+          <h1 id="myh1"></h1>
+        </div>
+        <div class="health">
+          <div class="player"></div>
+          <div class="giliran">
+            <h1 id="turn"></h1>
+          </div>
+          <div>
+            <h1 id="menang"></h1>
+          </div>
+        </div>
+        <div class="players" id="players">
+            <div class="duaPlayer">
+              <div class="duaPlayer1">
+                <img src="uichar/red_char.png" id="duaChPlayer1"> <br>
+                <p1 id="2pemainSatu">Budi</p1> <br>
+                <p1 id="2nyawaP1"></p1>
+              </div>
+              <div class="duaPlayer2">
+                <img src="uichar/green_char.png" id="duaChPlayer2"> <br>
+                <p2 id="2pemainDua">Jaya
+                </p2> <br>
+                <p2 id="2nyawaP2"></p2> 
+              </div>         
+            </div>
+            <div class="tigaPlayer">
+              <div class="tigaPlayer1">
+                <img src="uichar/red_char.png" id="tigaChPlayer1"> <br>
+                <p1 id="3pemainSatu"></p1> <br>
+                <p1 id="3nyawaP1"></p1> 
+              </div>
+              <div class="tigaPlayer2">
+                <img src="uichar/green_char.png" id="tigaChPlayer2"> <br>
+                <p2 id="3pemainDua"></p2> <br>
+                <p2 id="3nyawaP2"></p2>
+              </div>
+              <div class="tigaPlayer3">
+                <img src="uichar/yellow_char.png" id="tigaChPlayer3"> <br>
+                <p3 id="3pemainTiga"></p3> <br>
+                <p3 id="3nyawaP3"></p3>
+              </div>
+            </div>
+             <div class="empatPlayer">
+              <div class="empatPlayer1">
+                <img src="uichar/red_char.png" id="empatChPlayer1"> <br>
+                <p1 id="4pemainSatu"></p1> <br>
+                <p1 id="4nyawaP1"></p1>
+              </div>
+              <div class="empatPlayer2">
+                <img src="uichar/green_char.png" id="empatChPlayer2"> <br>
+                <p2 id="4pemainDua"></p2> <br>
+                <p2 id="4nyawaP2"></p2>
+              </div>
+              <div class="empatPlayer3">
+                <img src="uichar/yellow_char.png" alt="" id="empatChPlayer3"> <br>
+                <p3 id="4pemainTiga"></p3> <br>
+                <p3 id="4nyawaP3"></p3>
+              </div>
+              <div class="empatPlayer4">
+                <img src="uichar/pink_char.png" alt="" id="empatChPlayer4"> <br>
+                <p4 id="4pemainEmpat"></p4> <br>
+                <p4 id="4nyawaP4"></p4>
+              </div>
+            </div>
+          </div>
+         </div>
+        </div>        
+      </div>    
+      <div class="setting" id="setting">
+        <div>
+          <button id="kembali">KEMBALI</button>
+        </div>
+        <div id="modify">
+          <div class="modifyWaktu">
+            <h1 id="countdown">WAKTU</h1>
+            <div class="plusminusWaktu">
+              <button id="tambahWaktu">+</button>
+              <button id="kurangWaktu">-</button>
+            </div>
+          </div>
+          <div class="modifyNyawa">
+            <h2 id="nyawa">Nyawa</h2>
+            <div class="plusminusNyawa">
+              <button id="tambahNyawa">+<button>
+              <button id="kurangNyawa">-<button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
- 
     <script src="index.js"></script>
-</body>
+  </body>
 </html>
